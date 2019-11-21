@@ -11,7 +11,7 @@ searchBtn.onclick = function(event) {
     event.preventDefault(); //prevent any default behavior that browser is doing such as refereshing page
     const value = input.value;
 
-    const newURL = URL + '&query' + 'value'; //to make it more dynamic so that it still works across
+    const newURL = URL + '&query=' + value; //to make it more dynamic so that it still works across
 
 
     //built in js function fetch. pass in the url
@@ -21,7 +21,7 @@ searchBtn.onclick = function(event) {
             console.log('Data: ', data);
         })
         .catch((error) => { //to catch errors or if api is down
-            console.log('error: ', error);
+            console.log('Error: ', error);
         });
     console.log ('Value: ', value); //value- the input that users give, will appear in the console
 }
