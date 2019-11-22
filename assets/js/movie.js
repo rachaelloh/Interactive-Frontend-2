@@ -1,6 +1,6 @@
 //CONSTANTS
 const APIKey = 'de007f66726e0db6dce2c74935c5dda5';
-const URL = 'https://api.themoviedb.org/3/search/movie?de007f66726e0db6dce2c74935c5dda5';
+const URL = 'https://api.themoviedb.org/3/search/movie?api_key=de007f66726e0db6dce2c74935c5dda5';
 
 //selecting elements from DOM
 const searchBtn = document.querySelector('#searchBtn');
@@ -11,7 +11,7 @@ searchBtn.onclick = function(event) {
     event.preventDefault(); //prevent any default behavior that browser is doing such as refereshing page
     const value = input.value;
 
-    const newURL = URL + '&query=' + value; //to make it more dynamic so that it still works across
+    const newURL = URL + '&query='+value; //to make it more dynamic so that it still works across
 
 
     //built in js function fetch. pass in the url
