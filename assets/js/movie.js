@@ -6,6 +6,28 @@ const URL = 'https://api.themoviedb.org/3/search/movie?api_key=de007f66726e0db6d
 const searchBtn = document.querySelector('#searchBtn');
 const input = document.querySelector('#input');
 
+function containMovie() {
+    const movieElement = document.createElement('div');
+    movieElement.setAttribute('class', 'movie');
+
+    const movieTemplate = `
+        <section class="section">
+            <img
+                src="https://image.tmdb.org/t/p/w500/rZd0y1X1Gw4t583f01Qzj8DYY66.jpg"
+                alt=""
+                date-movie-id="557"
+            />
+            <img
+                src="https://image.tmdb.org/t/p/w500/rjbNpRMoVvqHmhmksbokcyCr7wn.jpg"
+                alt=""
+                data-movie-id="429617"
+            />
+        </section>
+        <div class="content">
+            <p id="content-close">X</p>
+        </div>
+    `;
+}
 
 searchBtn.onclick = function(event) {
     event.preventDefault(); //prevent any default behavior that browser is doing such as refereshing page
