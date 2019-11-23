@@ -11,6 +11,10 @@
     border: 2px solid #008CBA;
     border-radius: 5px;
   }
+
+  .webTop {
+    padding: 20px;
+  }
   
   #searchBtn:hover {
     background-color: white;
@@ -25,6 +29,7 @@
     display: flex;
     width: 100%;
     overflow-x: auto;
+    padding-left: 20px;
   }
 
   section img {

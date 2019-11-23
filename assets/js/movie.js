@@ -13,9 +13,7 @@ function movieSections(movies){
        //if statement so that image will only display if there is image provided in api
         if (movie.poster_path) {
         //to link to poster path of the api    
-            return `
-                <img src=${image + movie.poster_path} data-movie-id=${movie.id}/>
-            `;
+            return `<img src=${image + movie.poster_path} data-movie-id=${movie.id}/>`;
         }
     })
 }
@@ -40,6 +38,18 @@ function containMovie(movies) { //the div of the movie
     return movieElement;
 }
 
+function renderSearchMovies(data) {
+    
+    moviesSearch.innerHTML = ''; //will remove previous values and replace with new
+    const movies = data.results;
+    const movieBlock = containMovie(movies);
+    /*select element "movieSearch from html file 
+    and js select the movieblock values to be placed into the html file"*/
+    movieSearch.appendChild(movieBlock); 
+    console.log('Data: ', data);
+
+}
+
 searchBtn.onclick = function(event) {
     //prevent any default behavior that browser is doing such as refereshing page
     event.preventDefault(); 
@@ -52,17 +62,14 @@ searchBtn.onclick = function(event) {
     //built in js function fetch. pass in the url
     fetch(newURL)
         .then((res) => res.json()) //to return json format
-        .then((data) => {
-            const movies = data.results;
-            const movieBlock = containMovie(movies);
-            /*select element "movieSearch from html file 
-            and js select the movieblock values to be placed into the html file"*/
-            movieSearch.appendChild(movieBlock); 
-            console.log('Data: ', data);
-        })
+        .then(renderSearchMovies)
         .catch((error) => { //to catch errors or if api is down
             console.log('Error: ', error);
         });
+
+    //when search button is clicked, the input box will clear
+    input.value = '';
+    
     //value- the input that users give, will appear in the console
     console.log ('Value: ', value); 
 }
