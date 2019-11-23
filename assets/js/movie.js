@@ -1,7 +1,7 @@
 //CONSTANTS
 const APIKey = 'de007f66726e0db6dce2c74935c5dda5';
 const URL = 'https://api.themoviedb.org/3/search/movie?api_key=';
-const image = 'https://image.tmdb.org/t/p/w500/kvpNZAQow5es1tSY6XW2jAZuPPG.jpg'
+const image = 'https://image.tmdb.org/t/p/w500/';
 
 //selecting elements from DOM
 const searchBtn = document.querySelector('#searchBtn');
@@ -12,7 +12,7 @@ function movieSections(movies){
    return movies.map((movie) => {
     //to link to poster path of the api    
     return `
-            <img src=${movie.poster_path} data-movie-id=${movie.id}/>
+            <img src=${image + movie.poster_path} data-movie-id=${movie.id}/>
         `;
     })
 }
