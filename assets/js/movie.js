@@ -1,4 +1,5 @@
 //CONSTANTS
+const find = 'https://api.themoviedb.org/3/movie/'
 const APIKey = 'de007f66726e0db6dce2c74935c5dda5';
 const URL = 'https://api.themoviedb.org/3/search/movie?api_key=';
 const image = 'https://image.tmdb.org/t/p/w500/';
@@ -59,10 +60,9 @@ searchBtn.onclick = function(event) {
     //prevent any default behavior that browser is doing such as refereshing page
     event.preventDefault(); 
     const value = input.value;
-
+    const path = '/search/movie';
     //to make it more dynamic so that it still works across
-    const newURL = URL + APIKey + '&query=' + value;
-
+    const newURL = generateURL(path) + '&query=' + value;
 
     //built in js function fetch. pass in the url
     fetch(newURL)
@@ -87,15 +87,24 @@ document.onclick = function(event) {
     //when users click on an image, something will appear below
     //target tagname image, parent and sliblings also targetted
     if (target.tagName.toLowerCase() === 'img') {
-        console.log('Hello World');
-        console.log('Event: ', event);
         const movieID = target.dataset.movieId;
-        console.log('Movie ID: ', movieId);
+        console.log('Movie ID: ', movieID);
         const section = event.target.parentElement; //target section
         const content = section.nextElementSibling; // target content
         content.classList.add('content-display');
-    }
-
+   
+        const path = `/movie/${movieID}/videos`;
+        const url = generateUrl(path); 
+        //fetch videos
+        fetch(url)
+            .then((res) => res.json())
+            .then((data) => {
+                console.log('Videos: ', data);
+            })
+            .catch((error) => {
+                console.log('Error: ', error);
+            });
+        }
     //when users click close, the content will close
     //target id content
     if (target.id === 'content-close') {
