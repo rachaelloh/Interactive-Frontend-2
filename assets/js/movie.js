@@ -27,7 +27,7 @@ function containMovie(movies) { //the div of the movie
         <section class="section">
             ${movieSections(movies)}
         </section>
-        <div class="content">
+        <div class="content content-display">
             <p id="content-close">X</p>
         </div>
     `;
@@ -69,7 +69,29 @@ searchBtn.onclick = function(event) {
 
     //when search button is clicked, the input box will clear
     input.value = '';
-    
+
     //value- the input that users give, will appear in the console
     console.log ('Value: ', value); 
+}
+
+//event delegation
+document.onclick = function(event) {
+    
+    const target = event.target;
+    
+    //when users click on an image, something will appear below
+    //target tagname image, parent and sliblings also targetted
+    if (target.tagName.toLowerCase() === 'img') {
+        console.log('Hello World');
+        const section = event.target.parentElement; //target section
+        const content = section.nextElementSibling; // target content
+        content.classList.add('content-display');
+    }
+
+    //when users click close, the content will close
+    //target id content
+    if (target.id === 'content-close') {
+        const content = target.parentElement; // target content
+        content.classList.remove('content-display');
+    }
 }

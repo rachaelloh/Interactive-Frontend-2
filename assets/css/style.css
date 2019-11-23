@@ -42,3 +42,7 @@
     transform: scale(1.2);
     cursor: pointer;
   }
+
+  .content-display {
+    display: block;
+  }
