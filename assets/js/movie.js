@@ -8,12 +8,17 @@ const searchBtn = document.querySelector('#searchBtn');
 const input = document.querySelector('#input');
 const movieSearch = document.querySelector('#moviesSearch');
 
+function generateURL(path) {
+    const URL = `https://api.themoviedb.org/3${path}?api_key=` + APIKey
+    return URL;
+}
+
 function movieSections(movies){
    return movies.map((movie) => {
        //if statement so that image will only display if there is image provided in api
         if (movie.poster_path) {
         //to link to poster path of the api    
-            return `<img src=${image + movie.poster_path} data-movie-id=${movie.id}/>`;
+            return `<img src=${image + movie.poster_path} data-movie-id=${movies.id}/>`;
         }
     })
 }
@@ -56,7 +61,7 @@ searchBtn.onclick = function(event) {
     const value = input.value;
 
     //to make it more dynamic so that it still works across
-    const newURL = URL + APIKey + '&query=' + value; 
+    const newURL = URL + APIKey + '&query=' + value;
 
 
     //built in js function fetch. pass in the url
@@ -98,3 +103,5 @@ document.onclick = function(event) {
         content.classList.remove('content-display');
     }
 }
+
+    
