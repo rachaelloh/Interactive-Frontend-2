@@ -79,6 +79,17 @@ searchBtn.onclick = function(event) {
     console.log ('Value: ', value); 
 }
 
+//to embed videos
+function createIframe(video) {
+    const iframe = document.createElement('iframe');
+    iframe.src = `https://www.youtube.com/embed/${video.key}`;
+    iframe.width = 360;
+    iframe.height = 315;
+    iframe.allowFullscreen = true;
+
+    return iframe;
+}
+
 //event delegation, listen to entire DOM document
 document.onclick = function(event) {
     
@@ -88,18 +99,30 @@ document.onclick = function(event) {
     //target tagname image, parent and sliblings also targetted
     if (target.tagName.toLowerCase() === 'img') {
         const movieID = target.dataset.movieId;
-        console.log('Movie ID: ', movieID);
+        //console.log('Movie ID: ', movieID);
         const section = event.target.parentElement; //target section
         const content = section.nextElementSibling; // target content
         content.classList.add('content-display');
    
         const path = `/movie/${movieID}/videos`;
-        const url = generateUrl(path); 
+        const url = generateURL(path); 
         //fetch videos
         fetch(url)
             .then((res) => res.json())
             .then((data) => {
                 console.log('Videos: ', data);
+                const videos = data.results;
+                // if value is more than 4, just loop 4, otherwise, loop whichever value that it has
+                const length = videos.length > 4 ? 4 : videos.length;
+                //to store all iframes into the div created
+                const iframeContainer = document.createElement('div');
+
+                for (let i = 0; i < length; i++) {
+                    const video = videos[i];
+                    const iframe = createIframe(video);
+                    iframeContainer.appendChild(iframe);
+                    content.appendChild(iframeContainer);
+                }
             })
             .catch((error) => {
                 console.log('Error: ', error);
