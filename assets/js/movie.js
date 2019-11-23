@@ -74,7 +74,7 @@ searchBtn.onclick = function(event) {
     console.log ('Value: ', value); 
 }
 
-//event delegation
+//event delegation, listen to entire DOM document
 document.onclick = function(event) {
     
     const target = event.target;
@@ -83,6 +83,9 @@ document.onclick = function(event) {
     //target tagname image, parent and sliblings also targetted
     if (target.tagName.toLowerCase() === 'img') {
         console.log('Hello World');
+        console.log('Event: ', event);
+        const movieID = target.dataset.movieId;
+        console.log('Movie ID: ', movieId);
         const section = event.target.parentElement; //target section
         const content = section.nextElementSibling; // target content
         content.classList.add('content-display');
