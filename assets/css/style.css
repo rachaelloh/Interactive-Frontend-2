@@ -17,3 +17,13 @@
     color: black;
     
   }
+
+  section {
+    display: flex;
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  section img {
+    width: 350px;
+  }

@@ -10,10 +10,13 @@ const movieSearch = document.querySelector('#moviesSearch');
 
 function movieSections(movies){
    return movies.map((movie) => {
-    //to link to poster path of the api    
-    return `
-            <img src=${image + movie.poster_path} data-movie-id=${movie.id}/>
-        `;
+       //if statement so that image will only display if there is image provided in api
+        if (movie.poster_path) {
+        //to link to poster path of the api    
+            return `
+                <img src=${image + movie.poster_path} data-movie-id=${movie.id}/>
+            `;
+        }
     })
 }
 
