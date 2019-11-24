@@ -1,3 +1,15 @@
+body {
+  background-color: black;
+}
+
+h1, h2 {
+  color: red;
+}
+
+#content-close {
+  color: white;
+  cursor: pointer;
+}
 
 #input {
     width: 700px;
@@ -53,8 +65,10 @@
   }
 
   .content {
-    border: 1px solid red;
+    border: 1px solid #5d5d5d;
     display: none;
+    position: relative;
+    width: 100%;
   }
 
   .content div {
