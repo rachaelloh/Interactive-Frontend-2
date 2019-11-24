@@ -1,6 +1,6 @@
 //CONSTANTS
 const APIKey = 'de007f66726e0db6dce2c74935c5dda5';
-const URL = 'https://api.themoviedb.org/3/search/movie?api_key=de007f66726e0db6dce2c74935c5dda5';
+const url = 'https://api.themoviedb.org/3/search/movie?api_key=de007f66726e0db6dce2c74935c5dda5';
 const image = 'https://image.tmdb.org/t/p/w500';
 
 //selecting elements from DOM
@@ -8,9 +8,9 @@ const searchBtn = document.querySelector('#searchBtn');
 const input = document.querySelector('#input');
 const movieSearch = document.querySelector('#moviesSearch');
 
-function generateURL(path) {
-    const URL = `https://api.themoviedb.org/3${path}?api_key=de007f66726e0db6dce2c74935c5dda5`
-    return URL;
+function generateurl(path) {
+    const url = `https://api.themoviedb.org/3${path}?api_key=de007f66726e0db6dce2c74935c5dda5`
+    return url;
 }
 
 function movieSections(movies) {
@@ -61,10 +61,10 @@ searchBtn.onclick = function (event) {
     const value = input.value;
     const path = '/search/movie';
     //to make it more dynamic so that it still works across
-    const newURL = generateURL(path) + '&query=' + value;
+    const newurl = generateurl(path) + '&query=' + value;
 
     //built in js function fetch. parse in the url
-    fetch(newURL)
+    fetch(newurl)
         .then((res) => res.json()) //to return json format
         .then(renderSearchMovies)
         .catch((error) => { //to catch errors or if api is down
@@ -119,13 +119,13 @@ document.onclick = function (event) {
         const content = section.nextElementSibling; // target content
         content.classList.add('content-display');
 
-        const path = `/movie/${movieId}/videos`;
-        const URL = generateURL(path);
+        const path = `/movie/${movieId}videos`;
+        const url = generateurl(path);
         //fetch videos
-        fetch(URL)
+        fetch(url)
             .then((res) => res.json())
             .then((data) => { //createVideoTemplate(data, content)
-                console.log('Videos: ', data);
+                console.log("Videos: ", data);
             })
             .catch((error) => {
                 console.log('Error: ', error);
