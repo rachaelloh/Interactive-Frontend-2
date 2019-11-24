@@ -88,23 +88,6 @@ function createIframe(video) {
     return iframe;
 }
 
-function createVideoTemplate(data, content) {
-    console.log('Videos: ', data);
-    const video = data.results;
-    // if value is more than 4, just loop 4, otherwise, loop whichever value that it has
-    const length = video.length > 4 ? 4 : video.length;
-    //to store all iframes into the div created
-    const iframeContainer = document.createElement('div');
-
-    for (let i = 0; i < length; i++) {
-        const video = video[i];
-        const iframe = createIframe(video);
-        iframeContainer.appendChild(iframe);
-        content.appendChild(iframeContainer);
-    }
-}
-
-
 //event delegation, listen to entire DOM document
 document.onclick = function (event) {
 
@@ -126,6 +109,18 @@ document.onclick = function (event) {
             .then((res) => res.json())
             .then((data) => { //createVideoTemplate(data, content)
                 console.log("Videos: ", data);
+                const videos = data.results;
+                // if value is more than 4, just loop 4, otherwise, loop whichever value that it has
+                const length = videos.length > 4 ? 4 : videos.length;
+                //to store all iframes into the div created
+                const iframeContainer = document.createElement('div');
+
+                for (let i = 0; i < length; i++) {
+                    const video = videos[i];
+                    const iframe = createIframe(video);
+                    iframeContainer.appendChild(iframe);
+                    content.appendChild(iframeContainer);
+                }
             })
             .catch((error) => {
                 console.log('Error: ', error);
@@ -138,3 +133,19 @@ document.onclick = function (event) {
         content.classList.remove('content-display');
     }
 }
+
+/*function createVideoTemplate(data, content) {
+    console.log('Videos: ', data);
+    const video = data.results;
+    // if value is more than 4, just loop 4, otherwise, loop whichever value that it has
+    const length = video.length > 4 ? 4 : video.length;
+    //to store all iframes into the div created
+    const iframeContainer = document.createElement('div');
+
+    for (let i = 0; i < length; i++) {
+        const video = video[i];
+        const iframe = createIframe(video);
+        iframeContainer.appendChild(iframe);
+        content.appendChild(iframeContainer);
+    }
+} */
