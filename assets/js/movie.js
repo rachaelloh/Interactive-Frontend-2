@@ -15,7 +15,7 @@ function movieSections(movies) {
             const img = document.createElement('img');
             //to link to poster path of the api    
             img.src = image + movie.poster_path;
-            img['data-movie-id'] = image + movie.poster_path;
+            img.setAttribute('data-movie-id', movie.id);
 
             section.appendChild(img);
         }
@@ -35,6 +35,7 @@ function containMovie(movies, title = '') { //the div of the movie
     content.classList = 'content';
 
     const contentClose = `<p id="content-close">X</p>`;
+    
     content.innerHTML = contentClose;
 
     const section = movieSections(movies);
@@ -62,7 +63,7 @@ function renderMovies(data) {
 }
 
 function handleError(error){
-    console.log('Error: ', error)
+    console.log('Error: ', error);
 }
 
 searchBtn.onclick = function (event) {
@@ -98,8 +99,8 @@ function createVidTemp(data, content) {
     const iframeContainer = document.createElement('div');
 
     for (let i = 0; i < length; i++) {
-        const video = videos[i];
-        const iframe = createIframe(video);
+        const videos = videos[i];
+        const iframe = createIframe(videos);
         iframeContainer.appendChild(iframe);
         content.appendChild(iframeContainer);
     }
