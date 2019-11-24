@@ -120,3 +120,7 @@ document.onclick = function (event) {
         content.classList.remove('content-display');
     }
 }
+
+popMovies();
+topMovies();
+upcomingMovies();

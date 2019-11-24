@@ -20,5 +20,25 @@ function searchMovies(value){
     const url = generateurl(path) + '&query=' + value;
 
     requestMovies(url, renderSearchMovies, handleError);
+}
 
+function popMovies(){
+    const path = '/movie/popular';
+    const url = generateurl(path)
+
+    requestMovies(url, renderSearchMovies, handleError);
+}
+
+function topMovies(){
+    const path = '/movie/top_rated';
+    const url = generateurl(path)
+
+    requestMovies(url, renderSearchMovies, handleError);
+}
+
+function upcomingMovies(){
+    const path = '/movie/upcoming';
+    const url = generateurl(path)
+
+    requestMovies(url, renderSearchMovies, handleError);
 }
