@@ -1,10 +1,9 @@
-/*SEARCH BAR*/
+
 #input {
     width: 700px;
     font-size: 20px;
 }
 
-/*SEARCH*/
 #searchBtn {
     background-color: #008CBA; 
     color: white; 
@@ -23,7 +22,16 @@
 
   #moviesSearch {
     margin-top: 20px;
+    margin-bottom: 50px;
   }
+
+  .movies {
+    margin-bottom: 50px;
+  }
+  
+  h2 {  
+    margin-left: 20px;
+  } 
 
   section {
     display: flex;
@@ -35,6 +43,7 @@
   section img {
     width: 350px;
     transition: 300ms all;
+    margin-bottom: 30px;
   }
 
   img:hover {

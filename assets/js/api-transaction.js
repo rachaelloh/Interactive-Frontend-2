@@ -24,21 +24,24 @@ function searchMovies(value){
 
 function popMovies(){
     const path = '/movie/popular';
-    const url = generateurl(path)
+    const url = generateurl(path);
 
-    requestMovies(url, renderMovies, handleError);
+    const render = renderMovies.bind({ title: 'Popular Movies' });
+    requestMovies(url, render, handleError);
 }
 
 function topMovies(){
     const path = '/movie/top_rated';
-    const url = generateurl(path)
+    const url = generateurl(path);
 
-    requestMovies(url, renderMovies, handleError);
+    const render = renderMovies.bind({ title: 'Top Rated Movies' });
+    requestMovies(url, render, handleError);
 }
 
 function upcomingMovies(){
     const path = '/movie/upcoming';
-    const url = generateurl(path)
+    const url = generateurl(path);
 
-    requestMovies(url, renderMovies, handleError);
+    const render = renderMovies.bind({ title: 'Upcoming Movies' });
+    requestMovies(url, render, handleError);
 }

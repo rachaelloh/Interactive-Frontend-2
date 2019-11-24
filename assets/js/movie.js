@@ -15,12 +15,13 @@ function movieSections(movies) {
     })
 }
 
-function containMovie(movies) { //the div of the movie
+function containMovie(movies, title = '') { //the div of the movie
     const movieElement = document.createElement('div');
     movieElement.setAttribute('class', 'movie');
 
     //this section will be appended to the function containMovie
     const movieTemplate = ` 
+        <h2>${title}</h2>
         <section class="section">
             ${movieSections(movies)}
         </section>
@@ -46,9 +47,8 @@ function renderSearchMovies(data) {
 }
 
 function renderMovies(data) {
-
     const movies = data.results;
-    const movieBlock = containMovie(movies);
+    const movieBlock = containMovie(movies, this.title);
     moviesContainer.appendChild(movieBlock);
 }
 
