@@ -1,17 +1,8 @@
-//CONSTANTS
-const APIKey = 'de007f66726e0db6dce2c74935c5dda5';
-const url = 'https://api.themoviedb.org/3/search/movie?api_key=de007f66726e0db6dce2c74935c5dda5';
-const image = 'https://image.tmdb.org/t/p/w500';
 
 //selecting elements from DOM
 const searchBtn = document.querySelector('#searchBtn');
 const input = document.querySelector('#input');
 const movieSearch = document.querySelector('#moviesSearch');
-
-function generateurl(path) {
-    const url = `https://api.themoviedb.org/3${path}?api_key=de007f66726e0db6dce2c74935c5dda5`
-    return url;
-}
 
 function movieSections(movies) {
     return movies.map((movie) => {
@@ -52,24 +43,17 @@ function renderSearchMovies(data) {
     and js select the movieblock values to be placed into the html file"*/
     moviesSearch.appendChild(movieBlock);
     console.log('Data: ', data);
+}
 
+function handleError(error){
+    console.log('Error: ', error)
 }
 
 searchBtn.onclick = function (event) {
     //prevent any default behavior that browser is doing such as refereshing page
     event.preventDefault();
     const value = input.value;
-    const path = '/search/movie';
-    //to make it more dynamic so that it still works across
-    const newurl = generateurl(path) + '&query=' + value;
-
-    //built in js function fetch. parse in the url
-    fetch(newurl)
-        .then((res) => res.json()) //to return json format
-        .then(renderSearchMovies)
-        .catch((error) => { //to catch errors or if api is down
-            console.log('Error: ', error);
-        });
+    searchMovies(value);
 
     //when search button is clicked, the input box will clear
     input.value = '';
