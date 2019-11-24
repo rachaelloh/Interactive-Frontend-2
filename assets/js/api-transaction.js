@@ -26,19 +26,19 @@ function popMovies(){
     const path = '/movie/popular';
     const url = generateurl(path)
 
-    requestMovies(url, renderSearchMovies, handleError);
+    requestMovies(url, renderMovies, handleError);
 }
 
 function topMovies(){
     const path = '/movie/top_rated';
     const url = generateurl(path)
 
-    requestMovies(url, renderSearchMovies, handleError);
+    requestMovies(url, renderMovies, handleError);
 }
 
 function upcomingMovies(){
     const path = '/movie/upcoming';
     const url = generateurl(path)
 
-    requestMovies(url, renderSearchMovies, handleError);
+    requestMovies(url, renderMovies, handleError);
 }

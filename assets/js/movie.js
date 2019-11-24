@@ -2,7 +2,8 @@
 //selecting elements from DOM
 const searchBtn = document.querySelector('#searchBtn');
 const input = document.querySelector('#input');
-const movieSearch = document.querySelector('#moviesSearch');
+const moviesSearch = document.querySelector('#moviesSearch');
+const moviesContainer = document.querySelector('#moviesContainer');
 
 function movieSections(movies) {
     return movies.map((movie) => {
@@ -42,7 +43,13 @@ function renderSearchMovies(data) {
     /*select element "movieSearch from html file 
     and js select the movieblock values to be placed into the html file"*/
     moviesSearch.appendChild(movieBlock);
-    console.log('Data: ', data);
+}
+
+function renderMovies(data) {
+
+    const movies = data.results;
+    const movieBlock = containMovie(movies);
+    moviesContainer.appendChild(movieBlock);
 }
 
 function handleError(error){
