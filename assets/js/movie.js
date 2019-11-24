@@ -128,6 +128,7 @@ document.onclick = function (event) {
     }
 }
 
+searchMovies('Avengers');
 popMovies();
 topMovies();
 upcomingMovies();
