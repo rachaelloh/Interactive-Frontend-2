@@ -6,33 +6,42 @@ const moviesSearch = document.querySelector('#moviesSearch');
 const moviesContainer = document.querySelector('#moviesContainer');
 
 function movieSections(movies) {
-    return movies.map((movie) => {
+    const section = document.createElement('section');
+    section.classList = 'section';
+
+    movies.map((movie) => {
         //if statement so that image will only display if there is image provided in api
         if (movie.poster_path) {
+            const img = document.createElement('img');
             //to link to poster path of the api    
-            return `<img src=${image + movie.poster_path} data-movie-id=${movie.id}/>`;
+            img.src = image + movie.poster_path;
+            img['data-movie-id'] = image + movie.poster_path;
+
+            section.appendChild(img);
         }
     })
+
+    return section;
 }
 
 function containMovie(movies, title = '') { //the div of the movie
     const movieElement = document.createElement('div');
     movieElement.setAttribute('class', 'movie');
+    
+    const header = document.createElement('h2');
+    header.innerHTML = title;
+    
+    const content = document.createElement('div');
+    content.classList = 'content';
 
-    //this section will be appended to the function containMovie
-    const movieTemplate = ` 
-        <h2>${title}</h2>
-        <section class="section">
-            ${movieSections(movies)}
-        </section>
-        <div class="content content-display">
-            <p id="content-close">X</p>
-        </div>
-    `;
+    const contentClose = `<p id="content-close">X</p>`;
+    content.innerHTML = contentClose;
 
-    /*the above `` does not allow a child to append to it, 
-    hence the below will work*/
-    movieElement.innerHTML = movieTemplate;
+    const section = movieSections(movies);
+    
+    movieElement.appendChild(header);
+    movieElement.appendChild(section);
+    movieElement.appendChild(content);
     return movieElement;
 }
 
