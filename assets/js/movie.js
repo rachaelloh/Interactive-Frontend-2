@@ -1,8 +1,7 @@
 //CONSTANTS
-const find = 'https://api.themoviedb.org/3/movie/'
 const APIKey = 'de007f66726e0db6dce2c74935c5dda5';
-const URL = 'https://api.themoviedb.org/3/search/movie?api_key=';
-const image = 'https://image.tmdb.org/t/p/w500/';
+const URL = 'https://api.themoviedb.org/3/search/movie?api_key=de007f66726e0db6dce2c74935c5dda5';
+const image = 'https://image.tmdb.org/t/p/w500';
 
 //selecting elements from DOM
 const searchBtn = document.querySelector('#searchBtn');
@@ -10,16 +9,16 @@ const input = document.querySelector('#input');
 const movieSearch = document.querySelector('#moviesSearch');
 
 function generateURL(path) {
-    const URL = `https://api.themoviedb.org/3${path}?api_key=` + APIKey
+    const URL = `https://api.themoviedb.org/3${path}?api_key=de007f66726e0db6dce2c74935c5dda5`
     return URL;
 }
 
-function movieSections(movies){
-   return movies.map((movie) => {
-       //if statement so that image will only display if there is image provided in api
+function movieSections(movies) {
+    return movies.map((movie) => {
+        //if statement so that image will only display if there is image provided in api
         if (movie.poster_path) {
-        //to link to poster path of the api    
-            return `<img src=${image + movie.poster_path} data-movie-id=${movies.id}/>`;
+            //to link to poster path of the api    
+            return `<img src=${image + movie.poster_path} data-movie-id=${movie.id}/>`;
         }
     })
 }
@@ -37,7 +36,7 @@ function containMovie(movies) { //the div of the movie
             <p id="content-close">X</p>
         </div>
     `;
-    
+
     /*the above `` does not allow a child to append to it, 
     hence the below will work*/
     movieElement.innerHTML = movieTemplate;
@@ -45,26 +44,26 @@ function containMovie(movies) { //the div of the movie
 }
 
 function renderSearchMovies(data) {
-    
+
     moviesSearch.innerHTML = ''; //will remove previous values and replace with new
     const movies = data.results;
     const movieBlock = containMovie(movies);
     /*select element "movieSearch from html file 
     and js select the movieblock values to be placed into the html file"*/
-    movieSearch.appendChild(movieBlock); 
+    moviesSearch.appendChild(movieBlock);
     console.log('Data: ', data);
 
 }
 
-searchBtn.onclick = function(event) {
+searchBtn.onclick = function (event) {
     //prevent any default behavior that browser is doing such as refereshing page
-    event.preventDefault(); 
+    event.preventDefault();
     const value = input.value;
     const path = '/search/movie';
     //to make it more dynamic so that it still works across
     const newURL = generateURL(path) + '&query=' + value;
 
-    //built in js function fetch. pass in the url
+    //built in js function fetch. parse in the url
     fetch(newURL)
         .then((res) => res.json()) //to return json format
         .then(renderSearchMovies)
@@ -74,9 +73,8 @@ searchBtn.onclick = function(event) {
 
     //when search button is clicked, the input box will clear
     input.value = '';
-
     //value- the input that users give, will appear in the console
-    console.log ('Value: ', value); 
+    console.log('Value: ', value);
 }
 
 //to embed videos
@@ -90,44 +88,49 @@ function createIframe(video) {
     return iframe;
 }
 
+function createVideoTemplate(data, content) {
+    console.log('Videos: ', data);
+    const video = data.results;
+    // if value is more than 4, just loop 4, otherwise, loop whichever value that it has
+    const length = video.length > 4 ? 4 : video.length;
+    //to store all iframes into the div created
+    const iframeContainer = document.createElement('div');
+
+    for (let i = 0; i < length; i++) {
+        const video = video[i];
+        const iframe = createIframe(video);
+        iframeContainer.appendChild(iframe);
+        content.appendChild(iframeContainer);
+    }
+}
+
+
 //event delegation, listen to entire DOM document
-document.onclick = function(event) {
-    
+document.onclick = function (event) {
+
     const target = event.target;
-    
+
     //when users click on an image, something will appear below
     //target tagname image, parent and sliblings also targetted
     if (target.tagName.toLowerCase() === 'img') {
-        const movieID = target.dataset.movieId;
-        //console.log('Movie ID: ', movieID);
+        const movieId = target.dataset.movieId;
+        console.log('Movie ID: ', movieId);
         const section = event.target.parentElement; //target section
         const content = section.nextElementSibling; // target content
         content.classList.add('content-display');
-   
-        const path = `/movie/${movieID}/videos`;
-        const url = generateURL(path); 
-        //fetch videos
-        fetch(url)
-            .then((res) => res.json())
-            .then((data) => {
-                console.log('Videos: ', data);
-                const videos = data.results;
-                // if value is more than 4, just loop 4, otherwise, loop whichever value that it has
-                const length = videos.length > 4 ? 4 : videos.length;
-                //to store all iframes into the div created
-                const iframeContainer = document.createElement('div');
 
-                for (let i = 0; i < length; i++) {
-                    const video = videos[i];
-                    const iframe = createIframe(video);
-                    iframeContainer.appendChild(iframe);
-                    content.appendChild(iframeContainer);
-                }
+        const path = `/movie/${movieId}/videos`;
+        const URL = generateURL(path);
+        //fetch videos
+        fetch(URL)
+            .then((res) => res.json())
+            .then((data) => { //createVideoTemplate(data, content)
+                console.log('Videos: ', data);
             })
             .catch((error) => {
                 console.log('Error: ', error);
             });
-        }
+    }
     //when users click close, the content will close
     //target id content
     if (target.id === 'content-close') {
@@ -135,5 +138,3 @@ document.onclick = function(event) {
         content.classList.remove('content-display');
     }
 }
-
-    
