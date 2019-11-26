@@ -5,11 +5,12 @@ const input = document.querySelector('#input');
 const moviesSearch = document.querySelector('#moviesSearch');
 const moviesContainer = document.querySelector('#moviesContainer');
 
+
 function movieSections(movies) {
     const section = document.createElement('section');
     section.classList = 'section';
 
-    movies.map(function(movie) {
+    movies.map((movie) => {
         //if statement so that image will only display if there is image provided in api
         if (movie.poster_path) {
             const img = document.createElement('img');
@@ -131,11 +132,9 @@ document.onclick = function (event) {
         const url = generateurl(path);
         //fetch videos
         fetch(url)
-            .then(function(res) {
-                res.json();
-            }).then(function(data) {
-                createVidTemp(data, content);
-            }).catch(function(error) {
+            .then((res) => res.json()) 
+            .then((data) => createVidTemp(data, content))
+            .catch((error) => {
                 console.log('Error: ', error);
             });
     }

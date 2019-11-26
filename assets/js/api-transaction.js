@@ -10,9 +10,8 @@ function generateurl(path) {
 
 function requestMovies(url, onComplete, onError) { //refactoring-functions for success and for error
     fetch(url)
-        .then(function(res){
-            res.json();
-        }).then(onComplete)
+        .then((res) => res.json())
+        .then(onComplete)
         .catch(onError);
 }
 
