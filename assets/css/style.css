@@ -80,7 +80,7 @@ h1, h2 {
 
   section img {
     width: 100%;
-    height: 100%;
+    height: auto;
     transition: 300ms all;
     margin-bottom: 30px;
   }
