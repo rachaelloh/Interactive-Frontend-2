@@ -1,3 +1,17 @@
+table{
+  display:block;
+  background-color: black;
+}
+
+.web-logo {
+  margin-left: 20px;
+}
+
+#title{
+  color:white;
+  padding-left: 20px;
+}
+
 body {
   background-color: black;
 }
