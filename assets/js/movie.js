@@ -93,6 +93,13 @@ function createVidTemp(data, content) {
     content.innerHTML = '<p id="content-close">X</p>'; //to overwrite everything in this <p> tag, to clear vids after each search
     console.log("Videos: ", data);
     const videos = data.results;
+    if (videos.length === 0) {
+        content.innerHTML = `
+            <p id="content-close">X</p>
+            <p class="noTrailer">No Trailer found for this movie.</p>
+        `;
+        return;
+    }
     // if value is more than 4, just loop 4, otherwise, loop whichever value that it has
     const length = videos.length > 4 ? 4 : videos.length;
     //to store all iframes into the div created

@@ -22,8 +22,19 @@ h1, h2 {
 }
 
 #content-close {
-  color: white;
   cursor: pointer;
+  font-size: small;
+  position: absolute;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 50%;
+  left: 10px;
+  color: white;
+}
+
+.noTrailer {
+  color: white;
+  margin-left: 50px;
 }
 
 #input {
