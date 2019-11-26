@@ -79,7 +79,7 @@ h1, h2 {
   }
 
   section img {
-    width: 100%;
+    width: auto;
     height: auto;
     transition: 300ms all;
     margin-bottom: 30px;
