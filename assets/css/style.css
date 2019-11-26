@@ -63,6 +63,10 @@ h1, h2 {
     margin-bottom: 50px;
   }
 
+  .instruct {
+    color: white;
+    margin-top: 10px;
+  }
   .movies {
     margin-bottom: 50px;
   }
