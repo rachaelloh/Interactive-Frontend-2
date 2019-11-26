@@ -83,7 +83,7 @@ h1, h2 {
     height: auto;
     transition: 300ms all;
     margin-bottom: 30px;
-    object-fit: contain;
+    object-fit: cover;
   }
 
   img:hover {
