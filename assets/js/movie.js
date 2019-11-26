@@ -120,7 +120,7 @@ document.onclick = function (event) {
         const content = section.nextElementSibling; // target content
         content.classList.add('content-display');
 
-        const path = `/movie/${movieId}videos`;
+        const path = `/movie/${movieId}/videos`;
         const url = generateurl(path);
         //fetch videos
         fetch(url)

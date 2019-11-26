@@ -53,7 +53,7 @@ h1, h2 {
   }
 
   section img {
-    width: 350px;
+    width: 100%;
     transition: 300ms all;
     margin-bottom: 30px;
   }
