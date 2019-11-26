@@ -97,10 +97,10 @@ function createVidTemp(data, content) {
     const length = videos.length > 4 ? 4 : videos.length;
     //to store all iframes into the div created
     const iframeContainer = document.createElement('div');
-
+    
     for (let i = 0; i < length; i++) {
-        const videos = videos[i];
-        const iframe = createIframe(videos);
+        const video = videos[i];
+        const iframe = createIframe(video);
         iframeContainer.appendChild(iframe);
         content.appendChild(iframeContainer);
     }
