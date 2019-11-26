@@ -12,8 +12,7 @@ function requestMovies(url, onComplete, onError) { //refactoring-functions for s
     fetch(url)
         .then(function(res){
             res.json();
-        })
-        .then(onComplete)
+        }).then(onComplete)
         .catch(onError);
 }
 
