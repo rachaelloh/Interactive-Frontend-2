@@ -9,7 +9,7 @@ function movieSections(movies) {
     const section = document.createElement('section');
     section.classList = 'section';
 
-    movies.map((movie) => {
+    movies.map(function(movie) {
         //if statement so that image will only display if there is image provided in api
         if (movie.poster_path) {
             const img = document.createElement('img');
@@ -131,9 +131,11 @@ document.onclick = function (event) {
         const url = generateurl(path);
         //fetch videos
         fetch(url)
-            .then((res) => res.json())
-            .then((data) => createVidTemp(data, content))
-            .catch((error) => {
+            .then(function(res) {
+                res.json();
+            }).then(function(data) {
+                createVidTemp(data, content);
+            }).catch(function(error) {
                 console.log('Error: ', error);
             });
     }
