@@ -1,6 +1,7 @@
 table{
   display:block;
   background-color: black;
+  margin-top: 10px;
 }
 
 .web-logo {
@@ -95,4 +96,13 @@ h1, h2 {
 
   .content-display {
     display: block;
+  }
+
+  #footer{
+    line-height: 25px;
+    font-size: 1.5em;
+    text-align: left;
+    font-family: 'Dancing Script', sans-serif;
+    background-color:grey;
+    color:white;
   }
