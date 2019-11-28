@@ -23,7 +23,7 @@ Top Rated Movies Row: This row will display about 20 Top Rated Movies. Users wil
 Popular Movies Row: This row will display about 20 Popular Movies. Users will be able to see the videos/trailers when they click on the movie.
 Upcoming Movies Row: This row will display about 20 Upcoming Movies. Users will be able to see the videos/trailers when they click on the movie.
 
-(i) Wifreframes
+(i) Wireframes
 
 ## Project Skeleton - Features
 **Existing Features**
@@ -35,13 +35,17 @@ Upcoming Movies Row: This row will display about 20 Upcoming Movies. Users will 
 ## Technologies Used
 
 ## Deployment
+My code was written using [Visual Studio Code](https://code.visualstudio.com/). VS Code serves as the local repository which was then deployed to GitHub. Whenever a new commit is done to the master branch, the deployed site will be updated accordingly. To access the project on Github I would visit the GitHub web page and select rachaelloh/Interactive-Frontend-2. I will then click on settings and click master branch. When the master branch is selected, the deployed website will then be available as a clickable link.
+
+This repository can also be deployed locally by cloning the repository. This can be done by going to the main page of the repository to clone/download directly into the editor of choice by pasting git clone into terminal.
 
 ## Credits
+This is a list of some websites that helped me throughout the project:
 
-### Content
+1) Tutorial video on youtube https://www.youtube.com/watch?v=mWg2udweauY
+2) [TMDB API](https://developers.themoviedb.org/3/getting-started/introduction)
+3) [Stack Overflow](https://stackoverflow.com/)
+4) [w3schools](www.w3schools.com)
 
-### Media
-
-### Design
 
 **This is for educational use only.**
