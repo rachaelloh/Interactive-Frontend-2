@@ -27,9 +27,25 @@ Upcoming Movies Row: This row will display about 20 Upcoming Movies. Users will 
 
 ## Project Skeleton - Features
 **Existing Features**
+-The TMDB logo on the top left side of the website links to the mainpage.
+**Feature(s) for Future Implementation**
+-Include overviews and ratings of the movies
 
 ## Testing (Manual)
 (i) Mobile Responsiveness
+The website has been tested on **Macbook Air/iPad Mini/iPad/iPhone XS/iPhone 6** which covers various screen-size. The browsers used for testings are Google Chrome & Apple Safari.
+
+During the testing process, I found out that:
+
+-On devices such as iPhone and iPad, it might not be obvious to users that there are more movies if they swipe to their left. Hence, I added the instructions to scroll/swipe to the left below the search button/above the default movies.
+
+-The website is unable to work on the iPad Mini IOS9.3.5 and iPad IOS9.3.5.
+
+-The website worked on iPhone 6 IOS12.1.2, iPhone XS IOS13.1.3, iPad  6th  generation IOS12.4.1, and iPad Pro IOS13.1.3.
+
+In this case, the website was unable to work because of the use of ES6. Javascript ES6 does not support older versions of softwares. The ES6 features used in this project are Const and the arrow function (=>). Compatibility of software versions can be found [here](https://caniuse.com/).
+
+
 (ii) Test Cases
 
 ## Technologies Used
