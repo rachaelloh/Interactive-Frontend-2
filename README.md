@@ -43,7 +43,7 @@ During the testing process, I found out that:
 
 -The website worked on iPhone 6 IOS12.1.2, iPhone XS IOS13.1.3, iPad  6th  generation IOS12.4.1, and iPad Pro IOS13.1.3.
 
-In this case, the website was unable to work because of the use of ES6. Javascript ES6 does not support older versions of softwares. The ES6 features used in this project are Const and the arrow function (=>). Compatibility of software versions can be found [here](https://caniuse.com/).
+In this case, the website was unable to work because of the use of ES6. Javascript ES6 does not support older versions of softwares. The ES6 features used in this project are Const and the arrow function (=>). For this case, these features can only work from IOS10 onwards. Compatibility of software versions for ES6 can be found [here](https://caniuse.com/#search=es6).
 
 
 (ii) Test Cases
