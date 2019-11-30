@@ -16,11 +16,15 @@ A live website can be found here https://rachaelloh.github.io/Interactive-Fronte
 
 ### Project Scope
 The website will be designed based on the identified goals and hence placed in the following sections in a main page:
-Home page- Landing page 
+
 Search Bar: This will allow users to search for a specific title/keyword of movies where the list of movies will appear on the first row (which is at the Default Movies Row). 
+
 Default Movies Row: The first row of the page displays a list of preset movies in relation to a keyword, which in this case it is preset to the keyword ‘Avengers’. Users will be able to see the videos/trailers upon clicking on the particular movie that they want.
+
 Top Rated Movies Row: This row will display about 20 Top Rated Movies. Users will be able to see the videos/trailers when they click on the movie.
+
 Popular Movies Row: This row will display about 20 Popular Movies. Users will be able to see the videos/trailers when they click on the movie.
+
 Upcoming Movies Row: This row will display about 20 Upcoming Movies. Users will be able to see the videos/trailers when they click on the movie.
 
 (i) Wireframes
@@ -28,7 +32,9 @@ Upcoming Movies Row: This row will display about 20 Upcoming Movies. Users will 
 ## Project Skeleton - Features
 **Existing Features**
 -The TMDB logo on the top left side of the website links to the mainpage.
+
 **Feature(s) for Future Implementation**
+
 -Include overviews and ratings of the movies
 
 ## Testing (Manual)
@@ -49,6 +55,10 @@ In this case, the website was unable to work because of the use of ES6. Javascri
 (ii) Test Cases
 
 ## Technologies Used
+* [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5) - This was used to structure the layout of the website and build the pages.
+* [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) - This was used to beautify the website and to apply styles on the html.
+* [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - This was used to interact with users.
+* [Google Fonts](https://fonts.google.com/) - GoogleFonts are used to style the texts.
 
 ## Deployment
 My code was written using [Visual Studio Code](https://code.visualstudio.com/). VS Code serves as the local repository which was then deployed to GitHub. Whenever a new commit is done to the master branch, the deployed site will be updated accordingly. To access the project on Github I would visit the GitHub web page and select rachaelloh/Interactive-Frontend-2. I will then click on settings and click master branch. When the master branch is selected, the deployed website will then be available as a clickable link.
