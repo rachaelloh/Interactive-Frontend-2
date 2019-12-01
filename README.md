@@ -39,6 +39,7 @@ Upcoming Movies Row: This row will display about 20 Upcoming Movies. Users will 
 
 ## Testing (Manual)
 (i) Mobile Responsiveness
+
 The website has been tested on **Macbook Air/iPad Mini/iPad/iPhone XS/iPhone 6** which covers various screen-size. The browsers used for testings are Google Chrome & Apple Safari.
 
 During the testing process, I found out that:
@@ -53,6 +54,18 @@ In this case, the website was unable to work because of the use of ES6. Javascri
 
 
 (ii) Test Cases
+
+| Test Case(s)      | Test Description   | Outcome | 
+| :------------- |:-------------| :-------------| 
+| 1    | Users should be able to see the search bar at the top at all times. | Pass|
+| 2    | Users will see 'Avengers' related movies on the first row as it is set as the default movie. Next, they will be able to see 'Upcoming Movies' below, followed by 'Top Rated Movies' and 'Popular Movies'. | Pass|
+| 3    | After users search for a movie, the search bar will clear on its own. | Pass|
+| 4    | When users click on the search button, the relevant movies will appear on the default row. | Pass|
+| 5    | When users click on a movie, the movie trailer(s) will appear below in a dropdpwn box. Users can choose to watch video in fullscreen mode.| Pass|
+| 6    | When there is no movie trailer, users will see 'No trailer found for this movie.' in the dropdown box. | Pass|
+| 7    | When users click on the 'X' the dropdown will disappear. | Pass|
+| 8    | Users will see more movies when they scroll/swipe to the left.| Pass|
+| 9    | When users click on the TMDB logo on the top left corner of the website, they will be refirected to the main page https://rachaelloh.github.io/Interactive-Frontend-2/index.html | Pass|
 
 ## Technologies Used
 * [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5) - This was used to structure the layout of the website and build the pages.
