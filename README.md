@@ -37,6 +37,12 @@ Find below link for wireframe I designed for the web page:
 **Existing Features**
 -The TMDB logo on the top left side of the website links to the mainpage.
 
+-The search bar at the top of the page allows users to search for movies that they want if they are looking for a specific title.
+
+-The movie posters/images and users to click on them and each movie poster links up to 4 of the available trailers. 
+
+-Other than the preset default movies on the top row, users get to see the 3 main categories filtered out for them: Top Rated Movies, Upcoming Movies, and Popular Movies.
+
 **Feature(s) for Future Implementation**
 
 -Include overviews and ratings of the movies
@@ -74,7 +80,7 @@ In this case, the website was unable to work because of the use of ES6. Javascri
 ## Technologies Used
 * [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5) - This was used to structure the layout of the website and build the pages.
 * [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) - This was used to beautify the website and to apply styles on the html.
-* [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - This was used to interact with users.
+* [Javascript(vanillajs)](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - This was used to interact with users.
 * [Bootstrap](https://getbootstrap.com) - Bootstrap is used to ease the structuring and styles of some parts of the website.
 * [Google Fonts](https://fonts.google.com/) - GoogleFonts are used to style the texts.
 
