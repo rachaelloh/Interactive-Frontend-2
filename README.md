@@ -61,16 +61,17 @@ In this case, the website was unable to work because of the use of ES6. Javascri
 | 2    | Users will see 'Avengers' related movies on the first row as it is set as the default movie. Next, they will be able to see 'Upcoming Movies' below, followed by 'Top Rated Movies' and 'Popular Movies'. | Pass|
 | 3    | After users search for a movie, the search bar will clear on its own. | Pass|
 | 4    | When users click on the search button, the relevant movies will appear on the default row. | Pass|
-| 5    | When users click on a movie, the movie trailer(s) will appear below in a dropdpwn box. Users can choose to watch video in fullscreen mode.| Pass|
+| 5    | When users click on a movie, the movie trailer(s) will appear below in a dropdown box. Users can choose to watch video in fullscreen mode.| Pass|
 | 6    | When there is no movie trailer, users will see 'No trailer found for this movie.' in the dropdown box. | Pass|
 | 7    | When users click on the 'X' the dropdown will disappear. | Pass|
 | 8    | Users will see more movies when they scroll/swipe to the left.| Pass|
-| 9    | When users click on the TMDB logo on the top left corner of the website, they will be refirected to the main page https://rachaelloh.github.io/Interactive-Frontend-2/index.html | Pass|
+| 9    | When users click on the TMDB logo on the top left corner of the website, they will be redirected to the main page https://rachaelloh.github.io/Interactive-Frontend-2/index.html | Pass|
 
 ## Technologies Used
 * [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5) - This was used to structure the layout of the website and build the pages.
 * [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) - This was used to beautify the website and to apply styles on the html.
 * [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - This was used to interact with users.
+* [Bootstrap](https://getbootstrap.com) - Bootstrap is used to ease the structuring and styles of some parts of the website.
 * [Google Fonts](https://fonts.google.com/) - GoogleFonts are used to style the texts.
 
 ## Deployment
