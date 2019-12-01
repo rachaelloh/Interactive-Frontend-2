@@ -29,6 +29,10 @@ Upcoming Movies Row: This row will display about 20 Upcoming Movies. Users will 
 
 (i) Wireframes
 
+Find below link for wireframe I designed for the web page:
+
+[Interactive Frontend 2](https://drive.google.com/open?id=13e6HyenNtnwxMUeRcYh14zuUmDva5nRX)
+
 ## Project Skeleton - Features
 **Existing Features**
 -The TMDB logo on the top left side of the website links to the mainpage.
