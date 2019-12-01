@@ -90,7 +90,7 @@ h1, h2 {
 
   section img {
     width: auto;
-    height: auto;
+    height: 60vh;
     transition: 300ms all;
     margin-bottom: 30px;
     object-fit: cover;

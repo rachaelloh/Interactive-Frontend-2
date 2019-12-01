@@ -31,7 +31,7 @@ Upcoming Movies Row: This row will display about 20 Upcoming Movies. Users will 
 
 Find below link for wireframe I designed for the web page:
 
-[Interactive Frontend 2](https://drive.google.com/open?id=13e6HyenNtnwxMUeRcYh14zuUmDva5nRX)
+[Interactive Frontend 2](https://drive.google.com/open?id=1ZWJdfpxObFd-pNcW7AZ4YKvHLyB6Ht7N)
 
 ## Project Skeleton - Features
 **Existing Features**
