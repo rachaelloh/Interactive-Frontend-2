@@ -19,7 +19,7 @@ The website will be designed based on the identified goals and hence placed in t
 
 Search Bar: This will allow users to search for a specific title/keyword of movies where the list of movies will appear on the first row (which is at the Default Movies Row). 
 
-Default Movies Row: The first row of the page displays a list of preset movies in relation to a keyword, which in this case it is preset to the keyword ‘Avengers’. Users will be able to see the videos/trailers upon clicking on the particular movie that they want.
+Default Movies Row: The first row of the page displays a list of preset movies in relation to a keyword, which in this case it is preset to the keyword ‘Avengers’. Users will be able to see the videos/trailers upon clicking on the particular movie that they want. When users search for movies, the results will also appear in this row.
 
 Top Rated Movies Row: This row will display about 20 Top Rated Movies. Users will be able to see the videos/trailers when they click on the movie.
 
@@ -27,21 +27,24 @@ Popular Movies Row: This row will display about 20 Popular Movies. Users will be
 
 Upcoming Movies Row: This row will display about 20 Upcoming Movies. Users will be able to see the videos/trailers when they click on the movie.
 
+Now Playing Row: This row will display about 20 movies that are Now Playing. Users will be able to see the videos/trailers when they click on the movie. This is specified to a region which I have set to SG (Singapore).
+
 (i) Wireframes
 
 Find below link for wireframe I designed for the web page:
 
-[Interactive Frontend 2](https://drive.google.com/open?id=1ZWJdfpxObFd-pNcW7AZ4YKvHLyB6Ht7N)
+[Interactive Frontend 2](https://drive.google.com/open?id=1h6D6oFZmNMJscgMPL8IoVVC9JWPnvl97)
 
 ## Project Skeleton - Features
 **Existing Features**
+
 -The TMDB logo on the top left side of the website links to the mainpage.
 
 -The search bar at the top of the page allows users to search for movies that they want if they are looking for a specific title.
 
 -The movie posters/images and users to click on them and each movie poster links up to 4 of the available trailers. 
 
--Other than the preset default movies on the top row, users get to see the 3 main categories filtered out for them: Top Rated Movies, Upcoming Movies, and Popular Movies.
+-Other than the preset default movies on the top row, users get to see the 4 main categories filtered out for them: Top Rated Movies, Upcoming Movies, Popular Movies, and Now Playing.
 
 **Feature(s) for Future Implementation**
 

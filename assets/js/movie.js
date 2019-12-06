@@ -147,6 +147,7 @@ document.onclick = function (event) {
 }
 
 searchMovies('Avengers');
+nowPlaying();
 popMovies();
 topMovies();
 upcomingMovies();

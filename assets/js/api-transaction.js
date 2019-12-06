@@ -22,6 +22,14 @@ function searchMovies(value){
     requestMovies(url, renderSearchMovies, handleError);
 }
 
+function nowPlaying(){
+    const path = '/movie/now_playing';
+    const url = generateurl(path) + '&region=SG';
+
+    const render = renderMovies.bind({title: 'Now Playing'});
+    requestMovies(url, render, handleError);
+}
+
 function popMovies(){
     const path = '/movie/popular';
     const url = generateurl(path);
