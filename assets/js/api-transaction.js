@@ -32,7 +32,7 @@ function nowPlaying(){
 
 function popMovies(){
     const path = '/movie/popular';
-    const url = generateurl(path);
+    const url = generateurl(path) + '&region=SG';
 
     const render = renderMovies.bind({ title: 'Popular Movies' });
     requestMovies(url, render, handleError);
@@ -40,7 +40,7 @@ function popMovies(){
 
 function topMovies(){
     const path = '/movie/top_rated';
-    const url = generateurl(path);
+    const url = generateurl(path) + '&region=SG';
 
     const render = renderMovies.bind({ title: 'Top Rated Movies' });
     requestMovies(url, render, handleError);
@@ -48,7 +48,7 @@ function topMovies(){
 
 function upcomingMovies(){
     const path = '/movie/upcoming';
-    const url = generateurl(path);
+    const url = generateurl(path) + '&region=SG';
 
     const render = renderMovies.bind({ title: 'Upcoming Movies' });
     requestMovies(url, render, handleError);

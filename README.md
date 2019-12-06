@@ -1,6 +1,6 @@
 # Interactive-Frontend-2
 ## Introduction
-An interactive website to allow users to search and look for movies where they can watch some related movie trailers upon clicking from the main page itself or upon searching for a particular movie. When users click on an image/movie, up to 4 videos/trailers will be displayed below. This can also help them to make better decisions of their next movie choice. 
+An interactive one-page website to allow users to search and look for movies where they can watch some related movie trailers upon clicking from the main page itself or upon searching for a particular movie. When users click on an image/movie, up to 4 videos/trailers will be displayed below. This can also help them to make better decisions of their next movie choice. To better suit the target audience of Singaporeans, the region parameter has been added specifically to SG (Singapore) for the 4 main filtered movies so that it is more relevant. However, the search results are not limited to any region so users can obtain results all around.
 
 ## Demo
 A live website can be found here https://rachaelloh.github.io/Interactive-Frontend-2/
@@ -17,23 +17,23 @@ A live website can be found here https://rachaelloh.github.io/Interactive-Fronte
 ### Project Scope
 The website will be designed based on the identified goals and hence placed in the following sections in a main page:
 
-Search Bar: This will allow users to search for a specific title/keyword of movies where the list of movies will appear on the first row (which is at the Default Movies Row). 
+Search Bar: This will allow users to search for a specific title/keyword of movies where the list of movies will appear on the first row (which is at the Default Movies Row). Search results are not limited to a region.
 
-Default Movies Row: The first row of the page displays a list of preset movies in relation to a keyword, which in this case it is preset to the keyword ‘Avengers’. Users will be able to see the videos/trailers upon clicking on the particular movie that they want. When users search for movies, the results will also appear in this row.
+Default Movies Row: The first row of the page displays a list of preset movies in relation to a keyword, which in this case it is preset to the keyword ‘Avengers’. Users will be able to see the videos/trailers upon clicking on the particular movie that they want. When users search for movies, the results will also appear in this row. 
 
-Top Rated Movies Row: This row will display about 20 Top Rated Movies. Users will be able to see the videos/trailers when they click on the movie.
+Top Rated Movies Row: This row will display about 20 Top Rated Movies. Users will be able to see the videos/trailers when they click on the movie. This is specified to a region with an added parameter which I have set to SG (Singapore).
 
-Popular Movies Row: This row will display about 20 Popular Movies. Users will be able to see the videos/trailers when they click on the movie.
+Popular Movies Row: This row will display about 20 Popular Movies. Users will be able to see the videos/trailers when they click on the movie. This is specified to a region with an added parameter which I have set to SG (Singapore).
 
-Upcoming Movies Row: This row will display about 20 Upcoming Movies. Users will be able to see the videos/trailers when they click on the movie.
+Upcoming Movies Row: This row will display about 20 Upcoming Movies. Users will be able to see the videos/trailers when they click on the movie. This is specified to a region with an added parameter which I have set to SG (Singapore).
 
-Now Playing Row: This row will display about 20 movies that are Now Playing. Users will be able to see the videos/trailers when they click on the movie. This is specified to a region which I have set to SG (Singapore).
+Now Playing Row: This row will display about 20 movies that are Now Playing. Users will be able to see the videos/trailers when they click on the movie. This is specified to a region with an added parameter which I have set to SG (Singapore).
 
 (i) Wireframes
 
 Find below link for wireframe I designed for the web page:
 
-[Interactive Frontend 2](https://drive.google.com/open?id=1h6D6oFZmNMJscgMPL8IoVVC9JWPnvl97)
+[Interactive Frontend 2](https://drive.google.com/open?id=1jzXbyl6Co83f-r70i5Xl-CNQWJeU5dkV)
 
 ## Project Skeleton - Features
 **Existing Features**
