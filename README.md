@@ -1,6 +1,6 @@
 # Interactive-Frontend-2
 ## Introduction
-An interactive one-page website to allow users to search and look for movies where they can watch some related movie trailers upon clicking from the main page itself or upon searching for a particular movie. When users click on an image/movie, up to 4 videos/trailers will be displayed below. This can also help them to make better decisions of their next movie choice. To better suit the target audience of Singaporeans, the region parameter has been added specifically to SG (Singapore) for the 4 main filtered movies so that it is more relevant. However, the search results are not limited to any region so users can obtain results all around.
+An interactive one-page website to allow users to search and look for movies where they can watch some related movie trailers upon clicking from the main page itself or upon searching for a particular movie. When users click on an image/movie, up to 4 videos/trailers will be displayed below. This can also help them to make better decisions of their next movie choice. To better suit the target audience of Singaporeans, the region parameter has been added specifically to SG (Singapore) for the 4 main filtered categories so that it is more relevant. However, the search results are not limited to any region so users can obtain results all around.
 
 ## Demo
 A live website can be found here https://rachaelloh.github.io/Interactive-Frontend-2/
@@ -71,7 +71,7 @@ In this case, the website was unable to work because of the use of ES6. Javascri
 | Test Case(s)      | Test Description   | Outcome | 
 | :------------- |:-------------| :-------------| 
 | 1    | Users should be able to see the search bar at the top at all times. | Pass|
-| 2    | Users will see 'Avengers' related movies on the first row as it is set as the default movie. Next, they will be able to see 'Upcoming Movies' below, followed by 'Top Rated Movies' and 'Popular Movies'. | Pass|
+| 2    | Users will see 'Avengers' related movies on the first row as it is set as the default movie. Next, they will be able to see 'Upcoming Movies', 'Top Rated Movies','Popular Movies' and 'Now Playing'. | Pass|
 | 3    | After users search for a movie, the search bar will clear on its own. | Pass|
 | 4    | When users click on the search button, the relevant movies will appear on the default row. | Pass|
 | 5    | When users click on a movie, the movie trailer(s) will appear below in a dropdown box. Users can choose to watch video in fullscreen mode.| Pass|
