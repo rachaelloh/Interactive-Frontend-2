@@ -53,7 +53,7 @@ Find below link for wireframe I designed for the web page:
 ## Testing (Manual)
 (i) Mobile Responsiveness
 
-The website has been tested on **Macbook Air/iPad Mini/iPad/iPhone XS/iPhone 6** which covers various screen-size. The browsers used for testings are Google Chrome & Apple Safari.
+The website has been tested on **Macbook Air/iPad Mini/iPad/iPhone XS/iPhone 6/ Sony Xperia** which covers various screen-size. The browsers used for testings are Google Chrome & Apple Safari.
 
 During the testing process, I found out that:
 
@@ -61,7 +61,7 @@ During the testing process, I found out that:
 
 -The website is unable to work on the iPad Mini IOS9.3.5 and iPad IOS9.3.5.
 
--The website worked on iPhone 6 IOS12.1.2, iPhone XS IOS13.1.3, iPad  6th  generation IOS12.4.1, and iPad Pro IOS13.1.3.
+-The website worked on iPhone 6 IOS12.1.2, iPhone XS IOS13.1.3, iPad  6th  generation IOS12.4.1, iPad Pro IOS13.1.3, and Sony Xperia Android 5.1.1 (Chrome).
 
 In this case, the website was unable to work because of the use of ES6. Javascript ES6 does not support older versions of softwares. The ES6 features used in this project are Const and the arrow function (=>). For this case, these features can only work from IOS10 onwards. Compatibility of software versions for ES6 can be found [here](https://caniuse.com/#search=es6).
 
