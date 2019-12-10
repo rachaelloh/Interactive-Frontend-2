@@ -38,7 +38,7 @@ h1, h2 {
 }
 
 #input {
-    width: 700px;
+    width: 60vw;
     height: 45px;
     font-size: 20px;
     display: inline-block;
@@ -71,6 +71,7 @@ h1, h2 {
     color: white;
     margin-top: 10px;
   }
+
   .movies {
     margin-bottom: 50px;
   }
